@@ -14,7 +14,7 @@ db.on('connected',()=>{
     console.log("connected to mongodb successfully");
 })
 db.on('error',()=>{
-    console.log("rrror on connected to mongodb");
+    console.log("error on connected to mongodb");
 })
 db.on('disconnected',()=>{
     console.log("disconnected to mongodb successfully");
