@@ -15,7 +15,7 @@ const cors = require('cors');
 app.use(express.json());
 //app.use(cors()); 
 app.use(cors({
-    origin: 'https://localhost:3000',  // Replace with your actual frontend domain
+    origin: '*',  // Replace with your actual frontend domain
     credentials: true, // Allow sending cookies with requests
   }));
 
