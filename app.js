@@ -13,7 +13,12 @@ app.use(cookieParser());
 const cors = require('cors');
 // Other middleware and routes
 app.use(express.json());
-app.use(cors()); 
+//app.use(cors()); 
+app.use(cors({
+    origin: 'https://localhost:3000',  // Replace with your actual frontend domain
+    credentials: true, // Allow sending cookies with requests
+  }));
+
 app.get('/', (req, res) => {
     res.send("Welcome to Url shortener Project");
 });
