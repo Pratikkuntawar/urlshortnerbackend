@@ -114,7 +114,7 @@ router.post('/login', async (req, res) => {
             expires: new Date(Date.now() + 2589200000), // Cookie expiration (300 days)
             httpOnly: true, // Makes the cookie inaccessible to JavaScript on the client-side
             secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
-            sameSite: 'none',// Prevent CSRF attacks
+            sameSite: 'strict',// Prevent CSRF attacks
         });
 
         console.log("Login successful");
@@ -355,6 +355,7 @@ router.get('/:shortId', async (req, res) => {
           await user.save();
   
           // Redirect to the original long URL
+          console.log(url.longUrl)
           res.redirect(url.longUrl);
         } else {
           res.status(404).send('URL not found');

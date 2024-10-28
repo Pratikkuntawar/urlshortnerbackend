@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 //const mongoURL=process.env.DATABASE;
-const mongoURL=process.env.DATABASE_URL;
+ const mongoURL=process.env.DATABASE_URL;
 console.log(mongoURL);
 // const mongoURL=MONGODB_URL_LOCAL;
 mongoose.connect(mongoURL,{
