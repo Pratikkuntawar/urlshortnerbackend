@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema({
         },
         shortId: {
             type:String,
-            unique:true,
+            unique:false,
             required:true
         },
         creatorIp: {
