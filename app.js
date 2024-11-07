@@ -15,7 +15,7 @@ const cors = require('cors');
 app.use(express.json());
 //app.use(cors()); 
 app.use(cors({
-    origin: 'https://urlshortner-1j84.onrender.com/',  // Replace with your actual frontend domain
+    origin: 'https://urlshortner-1j84.onrender.com',  // Replace with your actual frontend domain
     credentials: true, // Allow sending cookies with requests
   }));
 
